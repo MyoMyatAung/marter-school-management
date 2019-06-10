@@ -66,7 +66,7 @@ export default props => {
                 <i className="fab fa-cuttlefish"></i>
               </li>
               <li>
-                <a>Classes</a>
+                <a href='/adminclass'>Classes</a>
                 <i className="fas fa-chalkboard"></i>
               </li>
               <li>
