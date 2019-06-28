@@ -15,4 +15,6 @@ module.exports = function(app){
     //Get Student Profile Image
     app.get('/students/getStudentImage/:imageName',student.getStudentImage);
 
+    app.post('/students/addMultiStudents',student.addMultiStudents);
+
 }

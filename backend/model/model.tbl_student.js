@@ -35,7 +35,7 @@ module.exports = (sequelize,Sequelize)=>{
         },
         student_imageURL: {
             type : Sequelize.STRING,
-            allowNull :false
+            allowNull :true
         },
         student_created_by : {
             type : Sequelize.STRING,

@@ -149,3 +149,30 @@ exports.getStudentImage = (req,res)=>{
         }
     });
 }
+
+exports.addMultiStudents = (req,res)=>{
+    const data = req.body;
+    data.map((item)=>{
+        Student.create({
+            student_id : item.student_id,
+            student_name : item.student_name,
+            student_roll_no : item.student_roll_no,
+            student_year : item.student_year,
+            student_address : item.student_address,
+            student_date_of_birth : item.student_date_of_birth,
+            student_phone : item.student_phone,
+            student_parent_id : item.student_parent_id,
+            student_imageURL : item.student_imageURL,
+            student_created_by : item.student_created_by,
+            student_updated_by : item.student_updated_by
+        })
+        .then((data)=>{
+            console.log('Inserted Student Data : '+data.dataValues);
+            //res.send('Student data inserted successfully');
+        })
+        .catch((err)=>{
+            console.log('Error in inserting student data : '+err);
+            //res.send('Error in inserting student data : '+err);
+        });
+    })
+}
